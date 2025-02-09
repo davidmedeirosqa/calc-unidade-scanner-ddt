@@ -17,19 +17,19 @@ public class Main {
             switch (scanner.next()) {
                 case "1":
                     System.out.println("Você selecionou a área do quadrado");
-                    áreaQuadrado(scanner);
+                    areaQuadrado(scanner);
                     return;
                 case "2":
                     System.out.println("Você selecionou a área do retângulo");
-                    árearetângulo(scanner);
+                    areaRetangulo(scanner);
                     return;
                 case "3":
                     System.out.println("Você selecionou a área do círculo");
-                    áreacírculo(scanner);
+                    areaCirculo(scanner);
                     return;
                 case "4":
                     System.out.println("Você selecionou a área do triângulo");
-                    áreatriângulo(scanner);
+                    areaTriangulo(scanner);
                     return;
                 case "5":
                     System.out.println("Você saiu");
@@ -43,14 +43,14 @@ public class Main {
 
     }
 
-    public static int áreaQuadrado(Scanner scanner) {
+    public static int areaQuadrado(Scanner scanner) {
         System.out.print("Qual o tamanho de cada lado do quadrado? ");
         int lado = scanner.nextInt();
         System.out.print("A área do quadrado é: " + lado * lado + " cm²");
         return lado * lado;
     }
 
-    public static int árearetângulo(Scanner scanner) {
+    public static int areaRetangulo(Scanner scanner) {
         System.out.print("Qual o tamanho da base do retângulo? ");
         int base = scanner.nextInt();
         System.out.print("Qual o tamanho da altura do retângulo? ");
@@ -59,15 +59,15 @@ public class Main {
         return base * altura;
     }
 
-    public static float áreacírculo(Scanner scanner) {
+    public static float areaCirculo(Scanner scanner) {
         System.out.print("Qual o tamanho do raio do círculo? ");
-        double raio = scanner.nextFloat();
-        double pi = 3.1416f;
+        float raio = scanner.nextFloat();
+        float pi = 3.1416f;
         System.out.print("A área do círculo é: " + (float) (pi * Math.pow(raio, 2)) + " cm²");
         return (float) (pi * Math.pow(raio, 2));
     }
 
-    public static float áreatriângulo(Scanner scanner) {
+    public static float areaTriangulo(Scanner scanner) {
         System.out.print("Qual o tamanho da base do triângulo? ");
         float base = scanner.nextFloat();
         System.out.print("Qual o tamanho da altura do triângulo? ");
