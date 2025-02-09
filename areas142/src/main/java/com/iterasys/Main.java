@@ -69,10 +69,11 @@ public class Main {
 
     public static float areaTriangulo(Scanner scanner) {
         System.out.print("Qual o tamanho da base do triângulo? ");
-        float base = scanner.nextFloat();
+        float base = scanner.nextInt();
         System.out.print("Qual o tamanho da altura do triângulo? ");
-        int altura = scanner.nextInt();
+        float altura = scanner.nextInt();
         System.out.print("A área do triângulo é: " + (base * altura) / 2 + " cm²");
         return (base * altura) / 2;
     }
+
 }
