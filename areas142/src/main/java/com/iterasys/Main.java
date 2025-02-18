@@ -9,6 +9,7 @@ public class Main {
         float base = scanner.nextFloat();
         float altura = scanner.nextFloat();
         float raio = scanner.nextFloat();
+        
 
         while (true) {
             System.out.println("Escolha as opções: ");
@@ -18,7 +19,7 @@ public class Main {
             System.out.println("4 - Área do triângulo");
             System.out.println("5 - Sair");
 
-            switch (scanner.nextLine()) {
+            switch (scanner.next()) {
                 case "1":
                     System.out.println("Você selecionou a área do quadrado");
                     areaQuadrado(lado);
@@ -37,6 +38,7 @@ public class Main {
                     return;
                 case "5":
                     System.out.println("Você saiu");
+                    scanner.close();
                     return;
                 default:
                     System.out.println("ERRO: Digitou o número errado.");
