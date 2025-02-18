@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int lado = scanner.nextInt();
+        float base = scanner.nextFloat();
+        float altura = scanner.nextFloat();
+        float raio = scanner.nextFloat();
 
         while (true) {
             System.out.println("Escolha as opções: ");
@@ -14,22 +18,22 @@ public class Main {
             System.out.println("4 - Área do triângulo");
             System.out.println("5 - Sair");
 
-            switch (scanner.next()) {
+            switch (scanner.nextLine()) {
                 case "1":
                     System.out.println("Você selecionou a área do quadrado");
-                    areaQuadrado(scanner);
+                    areaQuadrado(lado);
                     return;
                 case "2":
                     System.out.println("Você selecionou a área do retângulo");
-                    areaRetangulo(scanner);
+                    areaRetangulo(base, altura);
                     return;
                 case "3":
                     System.out.println("Você selecionou a área do círculo");
-                    areaCirculo(scanner);
+                    areaCirculo(raio);
                     return;
                 case "4":
                     System.out.println("Você selecionou a área do triângulo");
-                    areaTriangulo(scanner);
+                    areaTriangulo(base, altura);
                     return;
                 case "5":
                     System.out.println("Você saiu");
@@ -43,37 +47,34 @@ public class Main {
 
     }
 
-    public static int areaQuadrado(Scanner scanner) {
+    public static int areaQuadrado(int lado) {
         System.out.print("Qual o tamanho de cada lado do quadrado? ");
-        int lado = scanner.nextInt();
-        System.out.print("A área do quadrado é: " + lado * lado + " cm²");
-        return lado * lado;
+        int resultado = lado * lado;
+        System.out.print("A área do quadrado é: " + resultado + " cm²");
+        return resultado;
     }
 
-    public static int areaRetangulo(Scanner scanner) {
+    public static int areaRetangulo(float base, float altura) {
         System.out.print("Qual o tamanho da base do retângulo? ");
-        int base = scanner.nextInt();
         System.out.print("Qual o tamanho da altura do retângulo? ");
-        int altura = scanner.nextInt();
-        System.out.print("A área do retângulo é: " + base * altura + " cm²");
-        return base * altura;
+        float resultado = (int) base * altura;
+        System.out.print("A área do retângulo é: " + resultado + " cm²");
+        return (int) resultado;
     }
 
-    public static float areaCirculo(Scanner scanner) {
+    public static float areaCirculo(float raio) {
         System.out.print("Qual o tamanho do raio do círculo? ");
-        float raio = scanner.nextFloat();
         float pi = 3.1416f;
-        System.out.print("A área do círculo é: " + (float) (pi * Math.pow(raio, 2)) + " cm²");
+        System.out.print("A área do círculo é: " + (pi * Math.pow(raio, 2)) + " cm²");
         return (float) (pi * Math.pow(raio, 2));
     }
 
-    public static float areaTriangulo(Scanner scanner) {
+    public static float areaTriangulo(float base, float altura) {
         System.out.print("Qual o tamanho da base do triângulo? ");
-        float base = scanner.nextInt();
         System.out.print("Qual o tamanho da altura do triângulo? ");
-        float altura = scanner.nextInt();
-        System.out.print("A área do triângulo é: " + (base * altura) / 2 + " cm²");
-        return (base * altura) / 2;
+        float resultado = (base * altura) / 2;
+        System.out.print("A área do triângulo é: " + resultado + " cm²");
+        return resultado;
     }
 
 }
